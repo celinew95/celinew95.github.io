@@ -5,7 +5,7 @@ let triY;
 
 function setup() {
   //create the canvas element
-  createCanvas(900, 500);
+  createCanvas(windowWidth, windowHeight);
 
   //giving pointX a value of 300
   pointX = 600;
@@ -17,7 +17,7 @@ function setup() {
 
 
 function draw() {
-  background(168, 50, 153);
+  background(102, 153, 0);
  mouseDist = dist(mouseX, mouseY, pmouseX, pmouseY);
  print(mouseDist);
  smooth();
@@ -71,11 +71,16 @@ function draw() {
 
   if(keyIsPressed){
     //when mouse is pressed reset pointx to 200
-    triY= 600;
+    triY= 100;
   } else {
     //when mouse is released reset pointx to 600
-    triY = 300;
+    triY = 600;
 
   }
+}
 
+function keyTyped(){
+if (key === 's'){
+save("download.png");
+}
 }
