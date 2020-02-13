@@ -31,6 +31,7 @@ function setup() {
 function keyPressed(){
   if(key == " "){
     jerry.jump();
+
   }
 }
 
@@ -93,7 +94,7 @@ function endScreen(){
   textAlign(CENTER);
   //text(CENTER);
   text("GAME OVER", width/2, height/2);
-mySound.stop();
+  mySound.stop();
 }
 
 function windowResized(){
